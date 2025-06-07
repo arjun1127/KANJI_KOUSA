@@ -34,7 +34,7 @@ const Navbar = () => {
         auth0_id: user.sub,
       };
 
-      axios.post('http://localhost:5000/api/auth/save-user', userData)
+      axios.post(`${import.meta.enc.VITE_BACKEND_URL}/api/auth/save-user`, userData)
         .then(() => {
           console.log('User saved successfully');
           setHasSavedUser(true);

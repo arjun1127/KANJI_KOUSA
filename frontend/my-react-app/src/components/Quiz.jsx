@@ -41,7 +41,7 @@ const Quiz = ({ level, questions }) => {
   setSubmitted(true);
 
   if (isAuthenticated) {
-    fetch('http://localhost:5000/api/quiz/save-result', {
+    fetch(`${import.meta.enc.VITE_BACKEND_URL}/api/quiz/save-result`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

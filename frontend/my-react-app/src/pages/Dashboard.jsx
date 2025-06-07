@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      fetch(`http://localhost:5000/api/quiz/get-results?email=${user.email}`)
+      fetch(`${import.meta.enc.VITE_BACKEND_URL}/api/quiz/get-results?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setResults(data);
