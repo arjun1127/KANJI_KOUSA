@@ -35,7 +35,7 @@ app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', creden
 //   res.json({ message: 'User registered successfully' });//this works correctly
 // });
 
-app.use('/api/kanji', kanjiRoutes);
+app.use('/api/kanji', kanjiRoutes); 
 app.use('/api/auth', authRoutes);
 app.use('/api/quiz',quizStoreRoutes);
 
