@@ -1,0 +1,32 @@
+# === Node (backend & frontend) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Vite Build Output ===
+frontend/dist/
+frontend/.vite/
+
+# === dotenv files ===
+.env
+.env.*  # optional if you use .env.development etc.
+
+# === Logs ===
+logs/
+*.log
+
+# === OS/System Files ===
+.DS_Store
+Thumbs.db
+
+# === IDEs/Editors ===
+.vscode/
+.idea/
+
+# === Mac/Linux Trash ===
+.trash/
+
+# === Render Deploy (optional if using render.yaml) ===
+render.yaml
