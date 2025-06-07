@@ -14,7 +14,7 @@ const Home = () => {
   
 
   const fetchKanji = async () => {
-    let url = `${import.meta.env.VITE_BACKEND_URL}api/kanji`;
+    let url = `${import.meta.env.VITE_BACKEND_URL}api/kanji/`;
     const params = new URLSearchParams();
     if (query) params.append('q', query);
     if (level) params.append('level', level);
