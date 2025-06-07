@@ -54,50 +54,55 @@ const Navbar = () => {
     }
   }, []);
 
-  return (
-    <nav className="flex justify-end items-center gap-4 mb-4">
-      {isAuthenticated && user?.email_verified ? (
-        <>
-          <span className="text-white mr-2">👤 {user.email}</span>
-          <button
-            onClick={() => logout({ returnTo: window.location.origin })}
-            className="bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded transition"
-          >
-            Log Out
-          </button>
-          <button
-            className={`bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-4 py-2 rounded transition ${
-              glow ? 'animate-pulse ring-2 ring-cyan-300' : ''
-            }`}
-          >
-            <Link to="/dashboard">Analyze Your Scores</Link>
-          </button>
-        </>
-      ) : (
-        <>
-          <button
-            onClick={() => setShowModal(true)}
-            className={`bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-4 py-2 rounded transition ${
-              glow ? 'animate-pulse ring-2 ring-cyan-300' : ''
-            }`}
-          >
-            Login / Signup
-          </button>
+ return (
+  <nav className="flex flex-col sm:flex-row justify-end items-end sm:items-center gap-3 sm:gap-4 mb-4 px-4">
+    {isAuthenticated && user?.email_verified ? (
+      <>
+        <span className="text-white text-sm sm:text-base break-words max-w-[90vw] sm:max-w-none">
+          👤 {user.email}
+        </span>
 
-          <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Welcome</h2>
-            <p className="text-gray-300 mb-4">Please sign in using Auth0</p>
-            <button
-              onClick={handleLogin}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded w-full transition"
-            >
-              Continue with Auth0
-            </button>
-          </Modal>
-        </>
-      )}
-    </nav>
-  );
+        <button
+          onClick={() => logout({ returnTo: window.location.origin })}
+          className="bg-red-500 hover:bg-red-600 text-white font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded transition text-sm sm:text-base"
+        >
+          Log Out
+        </button>
+
+        <button
+          className={`bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded transition text-sm sm:text-base ${
+            glow ? 'animate-pulse ring-2 ring-cyan-300' : ''
+          }`}
+        >
+          <Link to="/dashboard">Analyze Your Scores</Link>
+        </button>
+      </>
+    ) : (
+      <>
+        <button
+          onClick={() => setShowModal(true)}
+          className={`bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded transition text-sm sm:text-base ${
+            glow ? 'animate-pulse ring-2 ring-cyan-300' : ''
+          }`}
+        >
+          Login / Signup
+        </button>
+
+        <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Welcome</h2>
+          <p className="text-gray-300 mb-4">Please sign in using Auth0</p>
+          <button
+            onClick={handleLogin}
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded w-full transition"
+          >
+            Continue with Auth0
+          </button>
+        </Modal>
+      </>
+    )}
+  </nav>
+);
+
 };
 
 export default Navbar;
