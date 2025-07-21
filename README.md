@@ -68,7 +68,7 @@ https://kanji-kousa-1.onrender.com/
 - Provide dropdown to filter results by JLPT level.
 - Render results in clean, styled React charts.
 ```
-5. 🤖 Kanji AI Assistant (Chatbot Page)
+### 5. 🤖 Kanji AI Assistant (Chatbot Page)
 Built using Google Gemini API to serve as an intelligent Kanji tutor.
 
 Users can ask about:
