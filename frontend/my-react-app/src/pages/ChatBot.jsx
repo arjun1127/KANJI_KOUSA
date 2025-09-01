@@ -120,7 +120,6 @@ const ChatBotPage = () => {
       className="relative flex flex-col items-center justify-start min-h-screen bg-black text-gray-100 p-4 sm:p-6"
       style={{ height: "100vh" }}
     >
-      {/* ❄️ Snowflakes */}
       {Array.from({ length: 50 }).map((_, i) => (
         <div
           key={i}
@@ -132,7 +131,7 @@ const ChatBotPage = () => {
             animationDelay: `${Math.random() * 5}s`,
           }}
         >
-          ❄
+          
         </div>
       ))}
 
