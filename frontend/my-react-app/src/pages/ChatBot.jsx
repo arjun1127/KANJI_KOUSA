@@ -222,7 +222,6 @@ const ChatBotPage = () => {
         </div>
       </div>
 
-      {/* 🌟 CSS styles */}
       <style>{`
         @keyframes glowDots {
           0% {
