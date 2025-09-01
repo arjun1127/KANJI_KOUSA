@@ -165,7 +165,6 @@ const ChatBotPage = () => {
         <div className="w-[48px]" /> {/* spacer */}
       </header>
 
-      {/* 💬 Chat area */}
       <div className="w-full max-w-3xl flex flex-col bg-gray-900 bg-opacity-90 rounded-2xl shadow-xl p-4 sm:p-6 flex-grow min-h-0">
         <div
           className="flex-1 overflow-y-auto mb-4 pr-2"
